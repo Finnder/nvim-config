@@ -26,9 +26,16 @@ return require('packer').startup(function(use)
     use 'jvirtanen/vim-octave'
     use 'f-person/git-blame.nvim'
 
-    use 'kylechui/nvim-surround' 
-        -- use ys<motion><delimiter>
-        -- ys (add), cs(change), ds(delete) 
+    use({
+        "kylechui/nvim-surround",
+        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+        config = function()
+            require("nvim-surround").setup({
+                -- Configuration here, or leave empty to use defaults
+            })
+        end
+    })
+
     use {
 
       'nvim-telescope/telescope.nvim', tag = '0.1.1',
