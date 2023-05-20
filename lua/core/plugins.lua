@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
     use 'nvim-treesitter/nvim-treesitter'
     use 'jvirtanen/vim-octave'
     use 'f-person/git-blame.nvim'
+    use 'tpope/vim-fugitive'
 
     use({
         "kylechui/nvim-surround",
