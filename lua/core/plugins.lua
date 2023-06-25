@@ -6,9 +6,9 @@ if fn.empty(fn.glob(install_path)) > 0 then
 fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 
 vim.cmd [[packadd packer.nvim]]
-return true
+    return true
 end
-return false
+    return false
 end
 
 local packer_bootstrap = ensure_packer()
@@ -18,14 +18,13 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'sainnhe/everforest'
     use 'ellisonleao/gruvbox.nvim'
-
     use 'nvim-tree/nvim-tree.lua'
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-lualine/lualine.nvim'
     use 'nvim-treesitter/nvim-treesitter'
     use 'jvirtanen/vim-octave'
-    use 'f-person/git-blame.nvim'
     use 'tpope/vim-fugitive'
+    use 'lommix/godot.nvim'
 
     use({
         "kylechui/nvim-surround",
@@ -37,11 +36,12 @@ return require('packer').startup(function(use)
         end
     })
 
-    use {
 
-      'nvim-telescope/telescope.nvim', tag = '0.1.1',
-      requires = { {'nvim-lua/plenary.nvim'} }
+    use {
+        'junegunn/fzf',
+        run = function() vim.fn['fzf#install']() end
     }
+    use 'junegunn/fzf.vim'
 
     use 'nvim-lua/popup.nvim'   
     use 'nvim-telescope/telescope-media-files.nvim'

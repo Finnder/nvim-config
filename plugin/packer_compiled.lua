@@ -84,10 +84,20 @@ _G.packer_plugins = {
     path = "/home/finn/.local/share/nvim/site/pack/packer/start/everforest",
     url = "https://github.com/sainnhe/everforest"
   },
-  ["git-blame.nvim"] = {
+  fzf = {
     loaded = true,
-    path = "/home/finn/.local/share/nvim/site/pack/packer/start/git-blame.nvim",
-    url = "https://github.com/f-person/git-blame.nvim"
+    path = "/home/finn/.local/share/nvim/site/pack/packer/start/fzf",
+    url = "https://github.com/junegunn/fzf"
+  },
+  ["fzf.vim"] = {
+    loaded = true,
+    path = "/home/finn/.local/share/nvim/site/pack/packer/start/fzf.vim",
+    url = "https://github.com/junegunn/fzf.vim"
+  },
+  ["godot.nvim"] = {
+    loaded = true,
+    path = "/home/finn/.local/share/nvim/site/pack/packer/start/godot.nvim",
+    url = "https://github.com/lommix/godot.nvim"
   },
   ["gruvbox.nvim"] = {
     loaded = true,
@@ -130,11 +140,6 @@ _G.packer_plugins = {
     path = "/home/finn/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["plenary.nvim"] = {
-    loaded = true,
-    path = "/home/finn/.local/share/nvim/site/pack/packer/start/plenary.nvim",
-    url = "https://github.com/nvim-lua/plenary.nvim"
-  },
   ["popup.nvim"] = {
     loaded = true,
     path = "/home/finn/.local/share/nvim/site/pack/packer/start/popup.nvim",
@@ -145,10 +150,10 @@ _G.packer_plugins = {
     path = "/home/finn/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
     url = "https://github.com/nvim-telescope/telescope-media-files.nvim"
   },
-  ["telescope.nvim"] = {
+  ["vim-fugitive"] = {
     loaded = true,
-    path = "/home/finn/.local/share/nvim/site/pack/packer/start/telescope.nvim",
-    url = "https://github.com/nvim-telescope/telescope.nvim"
+    path = "/home/finn/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-octave"] = {
     loaded = true,
