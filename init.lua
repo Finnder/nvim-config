@@ -11,6 +11,10 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+vim.g.everforest_transparent_background = 1
+vim.cmd [[colorscheme everforest ]]
+
+
 -- Autocomplete
 function _G.check_back_space()
     local col = vim.fn.col('.') - 1
@@ -19,5 +23,7 @@ end
 
 local keyset = vim.keymap.set
 local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
+
+
 
 keyset("i", "<ENTER>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)

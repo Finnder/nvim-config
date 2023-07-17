@@ -94,11 +94,6 @@ _G.packer_plugins = {
     path = "/home/finn/.local/share/nvim/site/pack/packer/start/fzf.vim",
     url = "https://github.com/junegunn/fzf.vim"
   },
-  ["godot.nvim"] = {
-    loaded = true,
-    path = "/home/finn/.local/share/nvim/site/pack/packer/start/godot.nvim",
-    url = "https://github.com/lommix/godot.nvim"
-  },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "/home/finn/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
@@ -108,6 +103,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/finn/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/finn/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-snippy"] = {
     loaded = true,

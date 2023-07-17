@@ -24,7 +24,23 @@ return require('packer').startup(function(use)
     use 'nvim-treesitter/nvim-treesitter'
     use 'jvirtanen/vim-octave'
     use 'tpope/vim-fugitive'
-    use 'lommix/godot.nvim'
+    use 'neovim/nvim-lspconfig'
+
+    use {
+        "mcchrish/zenbones.nvim",
+        -- Optionally install Lush. Allows for more configuration or extending the colorscheme
+        -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+        -- In Vim, compat mode is turned on as Lush only works in Neovim.
+        requires = "rktjmp/lush.nvim"
+    }
+    
+    local lspconfig = require 'lspconfig'
+
+    lspconfig.gdscript.setup{
+        cmd={ 'nc', '127.0.0.1', '6005' },
+        filetypes = { 'gd', 'gdscript', 'gdscript3' },
+        root_dir = lspconfig.util.root_pattern("project.godot", ".git"),
+    }
 
     use({
         "kylechui/nvim-surround",
