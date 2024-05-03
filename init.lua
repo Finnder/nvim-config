@@ -6,6 +6,7 @@ require('core/plugins')
 require('core/plugin_config')
 
 vim.o.relativenumber = true
+vim.o.number = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -13,6 +14,8 @@ vim.opt.expandtab = true
 
 vim.g.everforest_transparent_background = 1
 vim.cmd [[colorscheme everforest ]]
+
+
 
 
 -- Autocomplete

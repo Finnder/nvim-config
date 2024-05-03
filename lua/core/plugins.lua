@@ -25,6 +25,9 @@ return require('packer').startup(function(use)
     use 'jvirtanen/vim-octave'
     use 'tpope/vim-fugitive'
     use 'neovim/nvim-lspconfig'
+    use 'sainnhe/gruvbox-material'
+    use 'jnurmine/Zenburn'
+    use 'AlessandroYorba/Sierra'
 
     use {
         "mcchrish/zenbones.nvim",
