@@ -28,12 +28,14 @@ return require('packer').startup(function(use)
     use 'sainnhe/gruvbox-material'
     use 'jnurmine/Zenburn'
     use 'AlessandroYorba/Sierra'
+    use 'mrcjkb/haskell-tools.nvim'
+
+    use {'golang/tools', run = 'GO111MODULE=on go install golang.org/x/tools/gopls@latest'}
+
+    use 'marko-cerovac/material.nvim'
 
     use {
         "mcchrish/zenbones.nvim",
-        -- Optionally install Lush. Allows for more configuration or extending the colorscheme
-        -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
-        -- In Vim, compat mode is turned on as Lush only works in Neovim.
         requires = "rktjmp/lush.nvim"
     }
     
@@ -69,8 +71,6 @@ return require('packer').startup(function(use)
 
     use 'dcampos/nvim-snippy'
 
--- Automatically set up your configuration after cloning packer.nvim
--- Put this at the end after all plugins
 if packer_bootstrap then
 require('packer').sync()
 end
