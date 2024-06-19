@@ -14,13 +14,19 @@ vim.opt.expandtab = true
 vim.opt.termguicolors = true
 
 vim.g.everforest_transparent_background = 1
-vim.cmd [[ colorscheme gruvbox-material ]]
+vim.cmd [[ colorscheme material-oceanic ]]
 
 -- Autocomplete
 function _G.check_back_space()
     local col = vim.fn.col('.') - 1
     return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
 end
+
+vim.g.user_emmet_settings = {
+  javascript = {
+    extends = 'jsx',
+  },
+}
 
 local keyset = vim.keymap.set
 local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}

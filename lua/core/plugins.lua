@@ -29,6 +29,8 @@ return require('packer').startup(function(use)
     use 'jnurmine/Zenburn'
     use 'AlessandroYorba/Sierra'
     use 'mrcjkb/haskell-tools.nvim'
+    use 'mattn/emmet-vim'
+    use "luckasRanarison/tailwind-tools.nvim"
 
     use {'golang/tools', run = 'GO111MODULE=on go install golang.org/x/tools/gopls@latest'}
 
