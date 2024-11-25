@@ -16,8 +16,25 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
 
     use 'wbthomason/packer.nvim'
+
+    -- THEMES
+    use 'catppuccin/nvim'
+    use 'vague2k/vague.nvim'
     use 'sainnhe/everforest'
+    use 'shaunsingh/nord.nvim'
+    use 'tomasr/molokai'
     use 'ellisonleao/gruvbox.nvim'
+    use 'folke/tokyonight.nvim'
+    use 'junegunn/seoul256.vim'
+    use 'jnurmine/Zenburn'
+    use {
+        "mcchrish/zenbones.nvim",
+        requires = "rktjmp/lush.nvim"
+    }
+    use 'marko-cerovac/material.nvim'
+    use 'AlessandroYorba/Sierra'
+    use 'sainnhe/gruvbox-material'
+
     use 'nvim-tree/nvim-tree.lua'
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-lualine/lualine.nvim'
@@ -25,21 +42,11 @@ return require('packer').startup(function(use)
     use 'jvirtanen/vim-octave'
     use 'tpope/vim-fugitive'
     use 'neovim/nvim-lspconfig'
-    use 'sainnhe/gruvbox-material'
-    use 'jnurmine/Zenburn'
-    use 'AlessandroYorba/Sierra'
     use 'mrcjkb/haskell-tools.nvim'
     use 'mattn/emmet-vim'
     use "luckasRanarison/tailwind-tools.nvim"
 
     use {'golang/tools', run = 'GO111MODULE=on go install golang.org/x/tools/gopls@latest'}
-
-    use 'marko-cerovac/material.nvim'
-
-    use {
-        "mcchrish/zenbones.nvim",
-        requires = "rktjmp/lush.nvim"
-    }
     
     local lspconfig = require 'lspconfig'
 

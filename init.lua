@@ -14,7 +14,7 @@ vim.opt.expandtab = true
 vim.opt.termguicolors = true
 
 vim.g.everforest_transparent_background = 1
-vim.cmd [[ colorscheme material-oceanic ]]
+vim.cmd [[ colorscheme nord ]]
 
 -- Autocomplete
 function _G.check_back_space()
