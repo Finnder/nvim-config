@@ -34,11 +34,11 @@ return require('packer').startup(function(use)
     use 'marko-cerovac/material.nvim'
     use 'AlessandroYorba/Sierra'
     use 'sainnhe/gruvbox-material'
+    use 'creasty/candle.vim'
 
     use 'nvim-tree/nvim-tree.lua'
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-lualine/lualine.nvim'
-    use 'nvim-treesitter/nvim-treesitter'
     use 'jvirtanen/vim-octave'
     use 'tpope/vim-fugitive'
     use 'neovim/nvim-lspconfig'
