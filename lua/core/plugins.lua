@@ -5,6 +5,7 @@ local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
 fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 
+
 vim.cmd [[packadd packer.nvim]]
     return true
 end
@@ -17,7 +18,6 @@ return require('packer').startup(function(use)
 
     use 'wbthomason/packer.nvim'
 
-    -- THEMES
     use 'catppuccin/nvim'
     use 'vague2k/vague.nvim'
     use 'sainnhe/everforest'
@@ -37,6 +37,9 @@ return require('packer').startup(function(use)
     use 'creasty/candle.vim'
 
     use 'nvim-tree/nvim-tree.lua'
+    use 'sainnhe/gruvbox-material'
+    use 'jnurmine/Zenburn'
+
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-lualine/lualine.nvim'
     use 'jvirtanen/vim-octave'
@@ -49,36 +52,33 @@ return require('packer').startup(function(use)
     use {'golang/tools', run = 'GO111MODULE=on go install golang.org/x/tools/gopls@latest'}
     
     local lspconfig = require 'lspconfig'
+    use 'ray-x/go.nvim'
+	
+    use 'AlessandroYorba/Sierra'
 
-    lspconfig.gdscript.setup{
-        cmd={ 'nc', '127.0.0.1', '6005' },
-        filetypes = { 'gd', 'gdscript', 'gdscript3' },
-        root_dir = lspconfig.util.root_pattern("project.godot", ".git"),
+    use 'mrcjkb/haskell-tools.nvim'
+    use 'mattn/emmet-vim'
+
+    use 'marko-cerovac/material.nvim'
+
+    use {
+        "mcchrish/zenbones.nvim",
+        requires = "rktjmp/lush.nvim"
     }
 
-    use({
-        "kylechui/nvim-surround",
-        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-        config = function()
-            require("nvim-surround").setup({
-                -- Configuration here, or leave empty to use defaults
-            })
-        end
-    })
 
+    use 'habamax/vim-godot'
+
+    use 'nvim-lua/popup.nvim'   
+    use 'nvim-telescope/telescope-media-files.nvim'
 
     use {
         'junegunn/fzf',
         run = function() vim.fn['fzf#install']() end
     }
-    use 'junegunn/fzf.vim'
-
-    use 'nvim-lua/popup.nvim'   
-    use 'nvim-telescope/telescope-media-files.nvim'
 
     use { 'neoclide/coc.nvim', branch='release' }
 
-    use 'dcampos/nvim-snippy'
 
 if packer_bootstrap then
 require('packer').sync()

@@ -1,5 +1,7 @@
 {
     "svelte.enable-ts-plugin": true,
+    "coc.source.OmniSharp.enable" : true,
+    "coc.source.OmniSharp.triggerCharacters": ".",
   
     "languageserver": {
         "ccls": {
@@ -11,12 +13,6 @@
               "directory": "/tmp/ccls"
             }
           }
-        },
-
-        "godot": {
-            "host": "127.0.0.1",
-            "filetypes": ["gdscript", "gd"],
-            "port": 6008
         },
 
         "haskell": {
